@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<style>
+    .pocButtons {
+        min-width: 120px
+    }
+</style>
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p></p>
+        <div class="row mb-4 mt-4">
+            <div class="col-4">
+                <button class="btn pocButtons float-right" type="button" onclick="location.href='@Url.Action("CallNoError", "Home")'">Call valid</button>
+            </div>
+            <div class="col-8">
+                <p class="text-left">call API with valid parameters</p>
+            </div>
+            </div>
+        <div class="row">
+            <div class="col-4">
+                <button class="btn pocButtons float-right" type="button" onclick="location.href='@Url.Action("CallError", "Home")'">Call with error</button>
+            </div>
+            <div class="col-8">
+                <p class="text-left">call API with invalid parameters, causes divide by 0</p>
+            </div>
+
+        </div>
+
+    </div>
